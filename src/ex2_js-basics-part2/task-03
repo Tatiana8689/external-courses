@@ -1,25 +1,25 @@
-let countFunction = (a) => {
+let countFunction = (array) => {
   even = 0
   odd = 0
   zero = 0
-  for (i = 0; i < a.length; i++) {
-    if (typeof a[i] !== 'number') {
+  for (i = 0; i < array.length; i++) {
+    if (typeof array[i] !== 'number') {
       continue;
     }
-    if (isNaN(a[i])) {
+    if (isNaN(array[i])) {
       continue;
     }
     
-    if (a[i] == 0) {
+    if (array[i] == 0) {
       zero++;
       continue;
     } 
     
-    if (a[i] % 2 == 0) {
+    if (array[i] % 2 == 0) {
       even++;
     }
     
-    if (a[i] % 2 == 1) {
+    if (array[i] % 2 == 1) {
       odd++;
     }
   }
