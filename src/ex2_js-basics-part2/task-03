@@ -1,4 +1,4 @@
-let countFunction = (array) => {
+function countFunction(array) {
   even = 0
   odd = 0
   zero = 0

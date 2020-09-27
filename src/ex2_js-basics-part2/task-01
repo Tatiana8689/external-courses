@@ -1,4 +1,4 @@
-let typeFunction = (a) => {
+function typeFunction(a) {
    if (typeof a === 'number') {
 		if (isNaN(a)) {
 		    return underfined
