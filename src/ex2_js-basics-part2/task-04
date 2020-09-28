@@ -1,13 +1,13 @@
 function allEqual(array) {
-  for (let i = 0; i < array.length; i++) {
-    for (let k = i+1; k < array.length; k++) {
-      if (array[i] === array[k]) {
-        continue;
-      }
-      return false;
+    for (let i = 0; i < array.length; i++) {
+        for (let k = i+1; k < array.length; k++) {
+            if (array[i] === array[k]) {
+                continue;
+            }
+            return false;
+        }
+        return true;
     }
-    return true;
-  }
- return;
+    return;
 }
 module.exports = allEqual;
