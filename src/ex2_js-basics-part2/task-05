@@ -1,13 +1,10 @@
-function allEqual(array) {
-    for (let i = 0; i < array.length; i++) {
-        for (let k = i+1; k < array.length; k++) {
-            if (array[i] === array[k]) {
-                continue;
-            }
-            return false;
+function maxOfArray(array) {
+	let maximum = array[0];
+	for (let i = 1; i < array.length; i++) {
+		if (maximum < array[i]) {
+			maximum = array[i];
         }
-        return true;
     }
-    return;
+    return maximum;
 }
-module.exports = allEqual;
+module.exports = maxOfArray;
