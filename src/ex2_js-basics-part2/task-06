@@ -1,0 +1,12 @@
+function defineNamber(a) {
+    if (a > 1000) {
+        return `Данные не верны`
+    }
+	for(let i = 2; i < a; i++) {
+		if(a % i == 0) {
+			return `Число ${a} - составное`;
+		}
+	}
+    return `Число ${a} - простое`;
+}
+module.exports = defineNamber;
