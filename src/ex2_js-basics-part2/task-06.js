@@ -3,7 +3,7 @@ function defineNumber(a) {
     return `Данные неверны`;
   }
   for(let i = 2; i < a; i++) {
-	if(a % i == 0) {
+	if(a % i === 0) {
 	  return `Число ${a} - составное число`;
 	}
   }
