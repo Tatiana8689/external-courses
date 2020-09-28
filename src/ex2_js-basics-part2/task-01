@@ -1,11 +1,11 @@
 function typeFunction(a) {
-   if (typeof a === 'number') {
+    if (typeof a === 'number') {
 		if (isNaN(a)) {
 		    return underfined
 		}
         return typeof a;
   	} 
-   if (typeof a === 'string') {
+    if (typeof a === 'string') {
         return typeof a;
     } 
     return 'underfined';
