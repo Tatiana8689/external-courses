@@ -1,5 +1,6 @@
 function typeFunction(a) {
   const result = typeof a;
+  
   if (result === 'number') {
     if (isNaN(a)) {
       return undefined;

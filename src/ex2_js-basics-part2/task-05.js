@@ -1,8 +1,9 @@
 function maxOfArray(array) {
   let maximum = array[0];
+
   for (let i = 1; i < array.length; i++) {
-	if (maximum < array[i]) {
-	  maximum = array[i];
+	  if (maximum < array[i]) {
+	    maximum = array[i];
     }
   }
 	
