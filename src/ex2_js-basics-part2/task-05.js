@@ -9,4 +9,5 @@ function maxOfArray(array) {
 	
   return maximum;
 }
+
 module.exports = maxOfArray;

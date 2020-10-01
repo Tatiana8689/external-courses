@@ -1,5 +1,5 @@
 function defineNumber(a) {
-  if (a > 1000 || a === 1 || a <= 0) {
+  if (a > 1000 || a <= 1) {
     return `Данные неверны`;
   }
 
@@ -11,4 +11,5 @@ function defineNumber(a) {
 
   return `Число ${a} - простое число`;
 }
+
 module.exports = defineNumber;

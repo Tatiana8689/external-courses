@@ -17,4 +17,5 @@ function countFunction(array) {
   
   return [even, odd, zero];
 }
+
 module.exports = countFunction;

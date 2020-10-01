@@ -6,4 +6,5 @@ function countFunction(array) {
   console.log(array.length);
   return; 
 }
+
 module.exports = countFunction;

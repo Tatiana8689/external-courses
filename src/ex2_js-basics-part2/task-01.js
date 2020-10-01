@@ -15,4 +15,5 @@ function typeFunction(a) {
 
   return undefined;
 }
+
 module.exports = typeFunction;
