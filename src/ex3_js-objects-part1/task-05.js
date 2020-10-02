@@ -9,4 +9,3 @@ function copyObject(obj) {
 }
   
 module.exports = copyObject;
-  
