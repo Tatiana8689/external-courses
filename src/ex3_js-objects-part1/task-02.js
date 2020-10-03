@@ -1,4 +1,4 @@
-function allValue(obj) {
+function logAllProps(obj) {
   for (let key in obj) {
     console.log(key, obj[key]);
   }
@@ -6,4 +6,4 @@ function allValue(obj) {
   return;  
 }
   
-module.exports = allValue;
+module.exports = logAllProps;

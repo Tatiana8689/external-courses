@@ -8,10 +8,12 @@ function deepCopyObj(obj) {
   } 
   
   for (let key in obj) {
-    if (typeof obj[key] === 'object') {
-      clone[key] = deepCopyObj(obj[key]);    
+    let prop = obj[key];
+    
+    if (typeof prop === 'object') {
+      clone[key] = deepCopyObj(prop);    
     } else {
-      clone[key] = obj[key];
+      clone[key] = prop;
     }
   }
   
