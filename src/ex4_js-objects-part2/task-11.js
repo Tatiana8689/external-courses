@@ -23,4 +23,3 @@ function countLetter(string) {
 }
 
 module.exports = countLetter;
-  

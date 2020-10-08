@@ -3,4 +3,3 @@ function randomNumber(min, max) {
 }
   
 module.exports = randomNumber;
- 
