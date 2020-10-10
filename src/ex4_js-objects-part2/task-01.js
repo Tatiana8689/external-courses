@@ -1,10 +1,10 @@
-function searchKeyProt(key, obj) { 
-  if (key in obj) {
-    if (!obj.hasOwnProperty(key)) {
-      return obj[key];
-    } 
+function searchKeyProt(key, obj) {
+  const protObj = Object.getPrototypeOf(obj);
+   
+  if (protObj.hasOwnProperty([key])) {
+    return protObj[key];
   }
-  
+    
   return; //eslint-disable-line
 }
   

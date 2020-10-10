@@ -4,9 +4,7 @@ function addString(string, str, num) {
   const begin = array.slice(0, num + 1).join(' ');
   const end = array.slice(num + 1);
     
-  const newPhrase = [begin, str, end];
-    
-  return newPhrase.join(' ');
+  return [begin, str, end].join(' ');
 }
   
 module.exports = addString;

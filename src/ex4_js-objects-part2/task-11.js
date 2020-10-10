@@ -1,9 +1,8 @@
 function countLetter(string) {
-  let array = string.split('');
+  const array = string.split('');
+  const obj = {};
     
-  let obj = {};
-    
-  for (i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     let key = array[i];
     
     if (obj[key]) {

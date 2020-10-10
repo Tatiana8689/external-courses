@@ -3,7 +3,7 @@ function trimString(string, num) {
     return string.substring(0, num - 1) + '…';
   }
 
-  return; //eslint-disable-line
+  return string;
 }
   
 module.exports = trimString;

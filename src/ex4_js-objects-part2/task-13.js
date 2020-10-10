@@ -1,4 +1,4 @@
-function randomNumber() {
+function randomNumber(b) {
   return Math.floor(Math.random() * 101);
 }
 

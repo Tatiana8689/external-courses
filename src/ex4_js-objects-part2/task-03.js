@@ -1,5 +1,5 @@
 function fixSpace(string) {
-  return string.trim();
+  return string.substring(string.indexOf(' ') + 1, string.lastIndexOf(' '));
 }
   
 module.exports = fixSpace;
