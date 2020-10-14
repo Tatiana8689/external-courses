@@ -2,34 +2,46 @@ function Сalculator(value) {
   this.currentValue = value; 
   
   this.add = (a) => {
-    this.currentValue = this.currentValue + a;
+    if (a) {
+      this.currentValue = this.currentValue + a;
+    } else {
+      this.currentValue = this.currentValue + 0;
+    }
     
     return this.add;
   };
 
   this.subtract = (a) => {
-    this.currentValue = this.currentValue - a;
+    if (a) {
+      this.currentValue = this.currentValue - a;
+    } else {
+      this.currentValue = this.currentValue - 0;
+    }
     
     return this.subtract; 
   };
     
   this.divide = (a) => {
-    this.currentValue = this.currentValue / a;
+    if (a) {
+      this.currentValue = this.currentValue / a;
+    } else {
+      this.currentValue = this.currentValue / 1;
+    }
     
     return this.divide;
   };
     
   this.multiply = (a) => {
-    this.currentValue = this.currentValue * a;
+    if (a) {
+      this.currentValue = this.currentValue * a;
+    } else {
+      this.currentValue = this.currentValue * 1;
+    }
     
     return this.multiply;
   };
     
-  this.getResult = () => {
-    if (isNaN(this.currentValue)) {
-      this.currentValue = 0; 
-    }
-    
+  this.getResult = () => { 
     return this.currentValue;
   };
     
