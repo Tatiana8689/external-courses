@@ -3,21 +3,25 @@ function Сalculator(value) {
   
   this.add = (a = 0) => {
     this.currentValue = this.currentValue + a;
+    
     return this.add;
   };
 
   this.subtract = (a = 0) => {
     this.currentValue = this.currentValue - a;
+
     return this.subtract; 
   };
     
   this.divide = (a = 1) => {
     this.currentValue = this.currentValue / a;
+
     return this.divide;
   };
     
   this.multiply = (a = 1) => {
     this.currentValue = this.currentValue * a;
+
     return this.multiply;
   };
     
