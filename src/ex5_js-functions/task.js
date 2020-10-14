@@ -1,43 +1,23 @@
 function Сalculator(value) {
   this.currentValue = value; 
   
-  this.add = (a) => {
-    if (a) {
-      this.currentValue = this.currentValue + a;
-    } else {
-      this.currentValue = this.currentValue + 0;
-    }
-    
+  this.add = (a = 0) => {
+    this.currentValue = this.currentValue + a;
     return this.add;
   };
 
-  this.subtract = (a) => {
-    if (a) {
-      this.currentValue = this.currentValue - a;
-    } else {
-      this.currentValue = this.currentValue - 0;
-    }
-    
+  this.subtract = (a = 0) => {
+    this.currentValue = this.currentValue - a;
     return this.subtract; 
   };
     
-  this.divide = (a) => {
-    if (a) {
-      this.currentValue = this.currentValue / a;
-    } else {
-      this.currentValue = this.currentValue / 1;
-    }
-    
+  this.divide = (a = 1) => {
+    this.currentValue = this.currentValue / a;
     return this.divide;
   };
     
-  this.multiply = (a) => {
-    if (a) {
-      this.currentValue = this.currentValue * a;
-    } else {
-      this.currentValue = this.currentValue * 1;
-    }
-    
+  this.multiply = (a = 1) => {
+    this.currentValue = this.currentValue * a;
     return this.multiply;
   };
     
