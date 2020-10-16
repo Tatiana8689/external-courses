@@ -1,16 +1,18 @@
 function arrReduce(array, callback, initialValue) {
-  let previousValue = 0;
-  
   if (initialValue) {
     previousValue = initialValue;
-  } 
-  
-  for (let i = 0; i < array.length; i++ ) {
-    let item = array[i];
-
-    previousValue = callback(previousValue, item, i, array);  
+      
+    for (let i = 0; i < array.length; i++ ) {
+      previousValue = callback(previousValue, array[i], i, array);
+    }
+  } else {
+    previousValue = array[0];
+      
+    for (let i = 1; i < array.length; i++ ) {
+      previousValue = callback(previousValue, array[i], i, array);
+    }
   }
-
+  
   return previousValue;
 }
 
