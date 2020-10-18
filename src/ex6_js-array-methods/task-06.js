@@ -1,16 +1,14 @@
-function arrReduce(array, callback, initialValue) {
-  if (initialValue) {
-    previousValue = initialValue;
-      
-    for (let i = 0; i < array.length; i++ ) {
-      previousValue = callback(previousValue, array[i], i, array);
-    }
-  } else {
+function arrReduce(array, callback, initialValue) { 
+  if (arguments.length < 3) {
     previousValue = array[0];
-      
-    for (let i = 1; i < array.length; i++ ) {
-      previousValue = callback(previousValue, array[i], i, array);
-    }
+    i = 1;
+  } else {
+    previousValue = initialValue;
+    i = 0;
+  }
+  
+  for (; i < array.length; i++ ) {
+    previousValue = callback(previousValue, array[i], i, array);
   }
   
   return previousValue;

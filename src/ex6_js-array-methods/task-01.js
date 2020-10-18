@@ -3,8 +3,8 @@ function arrSlice(array, begin, end) {
   let start = begin || 0;
   let finish = end;
       
-  if (begin <= 0) {
-    start = array.length + start;
+  if (begin < 0) {
+    start = array.length + begin;
   } else {
     start = start;
   }
@@ -20,6 +20,10 @@ function arrSlice(array, begin, end) {
   }
   
   for (let i = start; i < finish; i++) {
+    if (i < 0) {
+      continue;
+    }
+
     newArray.push(array[i]);
   }
     
