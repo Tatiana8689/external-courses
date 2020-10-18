@@ -1,5 +1,5 @@
 function arrReduce(array, callback, initialValue) { 
-  if (arguments.length < 3) {
+  if (typeof initialValue === 'undefined') {
     previousValue = array[0];
     i = 1;
   } else {

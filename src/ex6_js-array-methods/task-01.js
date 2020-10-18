@@ -20,7 +20,7 @@ function arrSlice(array, begin, end) {
   }
   
   for (let i = start; i < finish; i++) {
-    if (i < 0) {
+    if (i < 0 || i >= array.length) {
       continue;
     }
 
