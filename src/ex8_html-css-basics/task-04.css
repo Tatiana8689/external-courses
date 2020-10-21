@@ -4,16 +4,10 @@
   line-height: 30px; 
 }
   
-@font-face {
-  font-family: "Oswald", sans-serif;
-  src: local("Oswald Regular"),
-       url("Oswald.woff") format("woff");
-}
-  
 h3 {
-  font-family: "Oswald", sans-serif;
+  font-family: "Commissioner", sans-serif;
   font-size: large;
-  font-weight: normal;
+  font-weight: bold;
   font-style: italic;
 }
   
