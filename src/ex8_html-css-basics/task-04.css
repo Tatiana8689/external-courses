@@ -1,0 +1,33 @@
+.body {
+  font-family: "Arial",sans-serif;
+  font-size: 16px;
+  line-height: 30px; 
+}
+  
+h3 {
+  font-family: "Commissioner", sans-serif;
+  font-size: large;
+  font-weight: bold;
+  font-style: italic;
+}
+  
+ol {
+  background-image: url("https://i.pinimg.com/originals/d5/b8/7c/d5b87c1e7975f669a656c9027a3d1c6e.jpg");
+  height: 100px;
+  width: 10em;
+  margin: 10px 0;
+  padding: 20px;
+  border: 2px solid black;
+}
+  
+.description-list {
+  background-color: #4e7dcb;
+}
+  
+.menu {
+  background-color: rgb(255,255,0);
+}
+  
+.gradient {
+  background-image: linear-gradient(yellow, blue);
+}
