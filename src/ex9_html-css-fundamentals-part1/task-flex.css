@@ -12,7 +12,6 @@ header {
   
 section {
   background: lightgreen;
-  flex-direction: column;
   width: 75%;
 }
   
