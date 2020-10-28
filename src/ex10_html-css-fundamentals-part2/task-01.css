@@ -1,7 +1,7 @@
 img {
     width: 400px;
     height: 400px;
-    clip-path: circle();
+    clip-path: circle(50%);
     -webkit-mask-image: url(https://learn.webpurple.net/static/aba86253822b61ea23852e30a0d7f53e/css3.svg);
     -webkit-mask-mode: alpha;
     -webkit-mask-repeat: repeat;
