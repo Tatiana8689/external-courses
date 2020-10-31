@@ -1,0 +1,442 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+    
+.body {
+    min-width: 1345px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+    
+ul {
+    list-style: none;
+}
+    
+a {
+    text-decoration: none;
+    color: #6d6e71;
+}
+    
+img {
+    display: block;
+}
+    
+.page-header,
+.container,
+.promo,
+.main-bottom {
+    width: 67.25%;
+    min-width: 1345px;
+    padding: 0 92px;
+    margin: 0 auto;
+}
+    
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 61px;
+    min-height: 217px;
+    background-color: white;
+    padding-bottom: 63px;
+}
+    
+.header-logo {
+    position: relative;
+}
+
+.header-logo:before {
+    content: "logo";
+    font-family: "Open Sans", sans-serif;
+    font-size: 41px;
+    line-height: 34px;
+    color: #3687c4;
+    position: absolute;
+    top: 30px;
+    left: 163px;
+}
+
+.header-logo img {
+    width: 403px;
+    height: 93px;
+}
+
+.contacts {
+    width: 206px;
+    font-size: 0;
+}
+
+.contacts-btn {
+    display: inline-block;
+    width: 68px;
+    height: 34px;
+    border-right: 1px solid #bcbec3;
+    background: url("image/sprite.png") no-repeat;
+}
+
+.contacts-btn:last-child {
+    border-right: none;
+}
+
+.phone-btn {
+    background-position: 20px 0;
+}
+
+.phone-btn:hover {
+    background: url("image/sprite_color.png") no-repeat;
+    background-position: 20px 0;
+}
+
+.place-btn {
+    background-position: -55px 0;
+}
+
+.place-btn:hover {
+    background: url("image/sprite_color.png") no-repeat;
+    background-position: -55px 0;
+}
+
+.envelope-btn {
+    background-position: -130px 0;
+}
+
+.envelope-btn:hover {
+    background: url("image/sprite_color.png") no-repeat;
+    background-position: -130px 0;
+}
+
+.nav {
+    border-top: 1px solid #eceef4;
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 85px;    
+}
+
+.burger {
+    display: none;
+}
+
+.header-logo-mini {
+    display: none;
+}
+
+.menu-nav {
+    display: flex;
+}
+
+.menu-nav li {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    border-right: 1px solid #eceef4;
+}
+
+.menu-nav li:last-child {
+    border-right: none;
+}
+
+.menu-nav a:before {
+    content: "";
+    border: 20px solid transparent; 
+    border-bottom: 10px solid #1faae2;
+    position: absolute;
+    bottom: 0;
+    left: 35%;
+    visibility: hidden;
+}
+
+.menu-nav a:hover:before {
+    visibility: visible;
+}
+
+.menu-nav a:hover{
+    color: #1faae2;
+}
+
+.menu-search {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.menu-search input {
+    border: none;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: #6d6e71;
+}
+
+.menu-search input:focus,
+.menu-search input:active,
+.menu-search input:hover {
+    outline: none;
+}
+
+.menu-search img {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 200px;
+    top: 30px; 
+}
+
+.main-top {
+    height: 885px;
+    background-image: url("image/iback.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+
+.promo h1 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 58.5px;
+    font-weight: bold;
+    line-height: 80.5px;
+    text-align: left;
+    color: #ffffff;
+    padding-top: 265px;
+    padding-left: 197px;
+    position: relative;
+    z-index: 0; 
+}
+
+.promo h1:before {
+    content: "\0026";
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 145px;
+    color: #bbedff;
+    position: absolute;
+    bottom: -40px;
+    left: 203px;
+    z-index: -1;
+}
+
+.promo h2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 45px;
+    font-weight: 300;
+    line-height: 80.5px;
+    text-align: left;
+    color: #ffffff;
+    padding-left: 310px;  
+}
+
+.sliders {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    margin-top: 146px;
+}
+
+.slide {
+    width: 322px;
+    height: 241px;
+}
+
+.like {
+    position: absolute;
+    width: 322px;
+    height: 65px;
+    bottom:0;
+}
+
+.like span {
+    position: absolute;
+    top: 27px;
+    left: 170px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;   
+}
+
+.like-green {
+    background-color: rgba(138, 202, 81, 0.9);
+    right: 433px;
+}
+
+.like-red {
+    background-color: rgba(254, 235, 117, 0.9);
+    right: 111px;
+}
+
+.like-green img,
+.like-red img {
+    position: absolute;
+    top: 18px;
+    left: 126px;
+}
+
+
+button {
+    width: 111px;
+    height: 241px;
+    background-color: #f4f4f4;
+    border: none;
+    position: relative;
+}
+
+button:focus,
+button:active,
+button:hover {
+    outline: none;
+}
+
+button:before {
+    content: "\203A";
+    font-size: 100px;
+    color: #d4d4d4;
+    position: absolute;
+    left: 44px;
+    top: 60px;
+}
+
+.main-bottom {
+    display: flex;
+    background-color: white;
+    margin-bottom: 180px;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+
+.main-bottom h3 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 26px;
+    text-align: left;
+    color: #6d6e71;
+    line-height: 0.92;
+    margin: 28px 0;
+}
+
+article {
+    position: relative;
+    padding-left: 136px;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: lighter;
+    line-height: 24px;
+    width: 386px;
+    text-align: justify;
+    color: #6d6e71;
+}
+
+.main-bottom .lamp,
+.main-bottom .tree {
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+.lamp {
+    width: 103px;
+    height: 113px;
+}
+
+.tree {
+    width: 95px;
+    height: 116px;
+}
+
+@media screen and (max-width: 1345px) {
+.menu-nav,
+.page-header,
+.contacts,
+.sliders {
+    display: none;
+}
+
+.promo,
+.main-bottom {
+    min-width: 915px;
+    padding: 0;
+}
+
+.container {
+    align-items: center;
+    width: 100%;
+    min-width: 915px;
+    height: 97px;
+    padding: 0 40px;  
+}
+
+.burger {
+    display: block;
+}
+
+.header-logo-mini {
+    position: relative;
+    display: block;
+    width: 152px;
+    height: 60px;
+    overflow: hidden;
+}
+    
+.header-logo-mini img {
+    transform: translate(-32%,-33%);    
+}
+
+.header-logo-mini:before {
+    content: "logo";
+    font-family: "Open Sans", sans-serif;
+    font-size: 41px;
+    line-height: 34px;
+    color: #3687c4;
+    position: absolute;
+    left: 25%;
+}
+
+.menu-search img {
+    top: 0; 
+}
+
+.promo h1 {
+    padding-left: 75px;
+}
+
+.promo h1:before {
+    left: 80px;
+}
+
+.promo h2 {
+    padding-left: 185px;  
+}
+
+.main-bottom {
+    flex-direction: column;
+}
+
+article {
+    margin-bottom: 67px;
+}
+
+p {
+    width: 779px;
+    height: 70px;
+    overflow-y: scroll;
+}
+
+p::-webkit-scrollbar { 
+    width: 0; 
+    background: transparent;
+}
+}
