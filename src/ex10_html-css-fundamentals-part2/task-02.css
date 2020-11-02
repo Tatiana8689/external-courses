@@ -1,0 +1,14 @@
+body {
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 40px;
+}
+  
+form {
+    margin-top: 10px;
+    margin-left: 10px;
+ }
+  
+fieldset {
+    width: 600px;
+}
