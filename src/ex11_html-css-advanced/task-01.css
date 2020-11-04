@@ -70,18 +70,21 @@ body {
    20% {
       transform: translateX(148px);
       width: 105px;
+      height: 95px;
       box-shadow: 0px 8px 4px 2px #2d2d2d;
    }
      
    30% {
       transform: translateX(236px);
-      width: 100px;
+      width: 110px;
+      height: 90px;
       box-shadow: 0px 8px 4px 2px #2d2d2d;
    }
      
    40% {
       transform: translateX(324px);
-      width: 100px;
+      width: 105px;
+      height: 95px;
       box-shadow: 0px 8px 4px 2px #2d2d2d;
    }
      
@@ -94,18 +97,21 @@ body {
    60% {
       transform: translateX(324px);
       width: 105px;
+      height: 95px;
       box-shadow: 0px 8px 4px 2px #2d2d2d;
    }
      
    70% {
       transform: translateX(236px);
-      width: 100px;
+      width: 110px;
+      height: 90px;
       box-shadow: 0px 8px 4px 2px #2d2d2d;
    }
      
    80% {
       transform: translateX(148px);
-      width: 100px;
+      width: 105px;
+      height: 95px;
       box-shadow: 0px 8px 4px 2px #2d2d2d;
    }
      
@@ -117,39 +123,42 @@ body {
 }
    
 .transformation {
-     margin: 150px auto;
-     width: 100px;
-     height: 100px;
-     border-radius: 100%;
-     background-image: radial-gradient(#E7F60A, #F9720A);
-     animation: transform 7s linear infinite;
+      margin: 150px auto;
+      width: 100px;
+      height: 100px;
+      animation: form 5s ease-in infinite;
 }
       
-@keyframes transform {
-   5% {
+@keyframes form {
+   0% {
+      border-radius: 100%;
+      background-image: radial-gradient(#E7F60A, #F9720A);
+   }
+   20% {
       border-radius: 0%;
    }
      
-   50% {
-      background-image: linear-gradient(#E7F60A, #8BE509, #F9720A);
-       
+   40% {
+      border-radius: 0%;
+      background-image: linear-gradient(#E7F60A, #530FAD);   
    }
      
    55% {
-      transform: scale(150%);
-      transform: skewX(180deg);
+      border-radius: 0%;
+      transform: scale(2, 2) skewX(40deg) scaleX(-1) ;
    }
      
-   60% {
+   70% {
+      border-radius: 0%; 
       transform: rotate(360deg);  
    }
      
-   95% {
-      background-image: linear-gradient(#8BE509, #E7F60A);
+   80% {
+      border-radius: 0%;
+      background-image: linear-gradient(#EC0033, #E7F60A);  
    }
      
-    100% {
+   100% {
       border-radius: 100%;
    }
 }
-
