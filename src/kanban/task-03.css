@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+    
+body {
+    width: 1152px;
+}
+
+header {
+    width: 1152px;
+    height: 55px;
+    background: #0067A3;
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    background-color: #E5E5E5;
+    height: 590px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 14px; 
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+h1 {
+    margin-left: 8px;
+    color: #ffffff;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 33px;
+}
+
+.menu-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 294px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.new-list{
+    width: 181px;
+    height: 33px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+  
+.new-list button,
+.new-list input {
+    outline: none;
+    border: none;
+    background-color: #FFFFFF;
+}
+  
+.new-list input {
+    width: 135px;
+    height: 18px;
+    margin-top:5px;   
+}
+  
+.new-list input::-webkit-input-placeholder {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+}
+  
+.new-list button{
+    width: 22px;
+    height: 22px;
+    margin: 10px
+}
+
+.user-icon {
+    background: #FFFFFF;
+    border-radius: 100%;
+}
+
+.profile-menu {
+    -webkit-appearance: none;
+    background: url("image/Vector.png") no-repeat 50% 50%;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+footer {
+    width: 1152px;
+    height: 55px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    background-color: #0067A3;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+}
+  
+input {
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+}
+    
+.footer-left {
+    margin-left: 43px;
+}
+  
+.footer-left input {
+    width: 70px; 
+}
+    
+.footer-right input {
+    width: 140px;
+}
