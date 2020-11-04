@@ -5,6 +5,7 @@
 }
     
 body {
+<<<<<<< HEAD
     width: 100%;
 }
 
@@ -15,12 +16,20 @@ a {
 
 .board-header {
     width: 100%;
+=======
+    width: 1152px;
+}
+
+header {
+    width: 1152px;
+>>>>>>> 84f2ad9... task-03 kanban isi done
     height: 55px;
     background: #0067A3;
     display: flex;
     justify-content: space-between;
 }
 
+<<<<<<< HEAD
 .tasks-board {
     background-color: #E5E5E5;
     height: 590px;
@@ -28,11 +37,20 @@ a {
 }
 
 .menu-left {
+=======
+main {
+    background-color: #E5E5E5;
+    height: 590px;
+}
+
+.logo {
+>>>>>>> 84f2ad9... task-03 kanban isi done
     display: flex;
     align-items: center;
     margin-left: 14px; 
 }
 
+<<<<<<< HEAD
 .image-logo {
     border: none;
     outline: none;
@@ -40,6 +58,14 @@ a {
 }
 
 .logo {
+=======
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+h1 {
+>>>>>>> 84f2ad9... task-03 kanban isi done
     margin-left: 8px;
     color: #ffffff;
     font-family: "Roboto";
@@ -59,6 +85,7 @@ a {
 .profile {
     display: flex;
     align-items: center;
+<<<<<<< HEAD
 }
   
 .new-list-btn {
@@ -69,12 +96,47 @@ a {
     border: none;
     width: 181px;
     height: 33px;
+=======
+    justify-content: flex-end;
+}
+
+.new-list{
+    width: 181px;
+    height: 33px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+  
+.new-list button,
+.new-list input {
+    outline: none;
+    border: none;
+    background-color: #FFFFFF;
+}
+  
+.new-list input {
+    width: 135px;
+    height: 18px;
+    margin-top:5px;   
+}
+  
+.new-list input::-webkit-input-placeholder {
+>>>>>>> 84f2ad9... task-03 kanban isi done
     font-family: "Roboto";
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
     color: #000000;
+<<<<<<< HEAD
     border-radius: 5px;
 }
 
@@ -85,11 +147,28 @@ a {
 .user-icon {
     background: #FFFFFF;
     border-radius: 50%;
+=======
+}
+  
+.new-list button{
+    width: 22px;
+    height: 22px;
+    margin: 10px
+}
+
+.user-icon {
+    background: #FFFFFF;
+    border-radius: 100%;
+>>>>>>> 84f2ad9... task-03 kanban isi done
 }
 
 .profile-menu {
     -webkit-appearance: none;
+<<<<<<< HEAD
     background: url("image/arrow-down.svg") no-repeat 50% 50%;
+=======
+    background: url("image/Vector.png") no-repeat 50% 50%;
+>>>>>>> 84f2ad9... task-03 kanban isi done
     width: 24px;
     height: 24px;
     border: none;
@@ -97,8 +176,13 @@ a {
     outline: none;
 }
 
+<<<<<<< HEAD
 .board-footer {
     width: 100%;
+=======
+footer {
+    width: 1152px;
+>>>>>>> 84f2ad9... task-03 kanban isi done
     height: 55px;
     font-family: "Roboto";
     font-style: normal;
@@ -113,6 +197,32 @@ a {
     padding: 0 24px;
 }
   
+<<<<<<< HEAD
 .footer-left .task-counter {
     margin-left: 43px;
 }
+=======
+input {
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+}
+    
+.footer-left {
+    margin-left: 43px;
+}
+  
+.footer-left input {
+    width: 70px; 
+}
+    
+.footer-right input {
+    width: 140px;
+}
+>>>>>>> 84f2ad9... task-03 kanban isi done
