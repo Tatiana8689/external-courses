@@ -129,26 +129,6 @@ footer {
     padding: 0 24px;
 }
   
-input {
-    outline: none;
-    border: none;
-    background: transparent;
-    color: #ffffff;
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 21px;
-}
-    
-.footer-left {
+.footer-left span {
     margin-left: 43px;
-}
-  
-.footer-left input {
-    width: 70px; 
-}
-    
-.footer-right input {
-    width: 140px;
 }
