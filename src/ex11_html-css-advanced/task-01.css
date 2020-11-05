@@ -1,0 +1,114 @@
+body {
+   background-color: #626262; 
+}
+   
+.animations {
+   display:flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+}
+   
+.loader {
+   font-size: 50px;
+   text-align: center;
+   margin-top: 100px;
+   margin-bottom: 100px;
+   width: 350px;
+   -webkit-background-clip: text;
+   color: transparent;
+   background-image: linear-gradient(90deg, #f6705a, #a5d274, #00c2f6, #8783c0, #fa97c2, #4758a5, #8e58a3, #6b1200, #f9895d);
+   background-size: 300% auto;
+   border-radius: 50px;
+   box-shadow: 3px 3px 3px 4px #2d2d2d;
+   animation: gradient 7s infinite linear;
+}
+   
+@keyframes gradient {
+   100% { background-position: 300%; }
+}
+   
+.jumping {
+   display: flex;
+   margin: 0 auto;
+   width: 500px;
+   justify-content: space-between;
+   background-color: #c4c3c3;
+   box-shadow: 3px 3px 3px 4px #2d2d2d;
+   position: relative;   
+}
+   
+.block {
+   width: 50px;
+   height: 300px;
+   margin: 10px 10px;
+   border: 2px solid #474747;
+   background-color: black;
+   border-radius: 10px;
+   background-image: linear-gradient(to right, #363636, #7e7e7e, #363636);
+   box-shadow: 3px 5px 4px 2px #2d2d2d;
+}
+   
+.ball {
+   width: 100px;
+   height: 100px;
+   border-radius: 100%;
+   border: 1px solid #1e2752;
+   background-image: radial-gradient( #7884ba, #3a477f,  #10183e);
+   box-shadow: 0 10px 4px 2px #2d2d2d;
+   position: absolute;
+   top: 100px;
+   animation: jump 0.7s linear alternate infinite;
+}
+   
+@keyframes jump {
+   from {
+      transform: translateX(60px);
+   }
+  
+   to {
+      transform: translateX(340px); 
+   }
+}
+   
+.transformation {
+   margin: 150px auto;
+   width: 100px;
+   height: 100px;
+   animation: form 5s ease-in infinite;
+}
+      
+@keyframes form {
+   0% {
+      border-radius: 100%;
+      background-image: radial-gradient(#E7F60A, #F9720A);
+   }
+
+   20% {
+      border-radius: 0%;
+   }
+     
+   40% {
+      border-radius: 0%;
+      background-image: linear-gradient(#E7F60A, #530FAD);   
+   }
+     
+   55% {
+      border-radius: 0%;
+      transform: scale(2, 2) skewX(40deg) scaleX(-1) ;
+   }
+     
+   70% {
+      border-radius: 0%; 
+      transform: rotate(360deg);  
+   }
+     
+   80% {
+      border-radius: 0%;
+      background-image: linear-gradient(#EC0033, #E7F60A);  
+   }
+     
+   100% {
+      border-radius: 100%;
+   }
+}
