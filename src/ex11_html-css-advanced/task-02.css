@@ -4,7 +4,7 @@
     font-weight:bold;
 }
   
-label { 
+.label { 
     position:absolute;
     left:5px; 
     top:0; 
@@ -15,18 +15,18 @@ label {
     visibility: hidden;  
 }
   
-input { 
+.input { 
     margin-top:15px; 
     border: 2px solid #A6A6A6; 
     padding: 5px 5px;
     outline: none;
 }
   
-input::-webkit-input-placeholder {
+.input::-webkit-input-placeholder {
     color: #A6A6A6;
 }
   
-input:valid ~ label { 
+.input:valid ~ .label { 
     top: -3px;
     font-size: 10px;
     color:#0052FF;
