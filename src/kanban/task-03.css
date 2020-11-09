@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.board-header {
+    width: 100%;
+    height: 55px;
+    background: #0067A3;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tasks-board {
+    background-color: #E5E5E5;
+    height: calc(100% - 110px);
+    background-color: #0079BF;
+}
+
+.menu-left {
+    display: flex;
+    align-items: center;
+    margin-left: 14px;
+}
+
+.image-logo {
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.logo {
+    margin-left: 8px;
+    color: #ffffff;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 33px;
+}
+
+.menu-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 294px;
+}
+
+.profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.new-list-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    outline: none;
+    border: none;
+    width: 181px;
+    height: 33px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.describe-btn {
+    padding-right: 10px;
+}
+
+.user-icon {
+    background: #FFFFFF;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.profile-menu {
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+}
+
+.list {
+    position: absolute;
+    right: 0;
+    top: 55px;
+    width: 130px;
+    list-style: none;
+    background-color: #FFFFFF;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.list .item {
+    padding: 10px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.list .item:hover {
+    background-color: #0067A3;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.board-footer {
+    width: 100%;
+    height: 55px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    background-color: #0067A3;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+}
+
+.footer-left .task-counter {
+    margin-left: 43px;
+}
