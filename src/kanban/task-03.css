@@ -66,6 +66,7 @@ a {
     outline: none;
     background-color: transparent;
     cursor: pointer;
+    margin-right: 10px;
 }
 
 .new-list-btn {
@@ -81,6 +82,7 @@ a {
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
+    background: #FFFFFF;
     color: #000000;
     border-radius: 5px;
     cursor: pointer;
@@ -97,7 +99,7 @@ a {
     height: 40px;
 }
 
-.profile-menu {
+.shevron-icon {
     width: 24px;
     height: 24px;
     background-color: transparent;
@@ -112,6 +114,7 @@ a {
     background-color: #FFFFFF;
     text-align: left;
     border-radius: 5px;
+    margin-right: 10px;
 }
 
 .list .item {
@@ -128,6 +131,10 @@ a {
     color: #ffffff;
     cursor: pointer;
 
+}
+
+.open .shevron-icon {
+    transform: scale(1, -1);
 }
 
 .board-footer {
