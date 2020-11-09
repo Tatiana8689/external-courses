@@ -17,8 +17,7 @@ right.addEventListener('click', nextSlide)
 
 function prevSlide(){
   header.style.display = 'none';
-  imageSlider.animate([{opacity: '.3'},{opacity: '1'}],
-                     {duration: 800, fill: 'forwards'})
+  imageSlider.animate([{opacity: '.5'},{opacity: '1'}], {duration: 800, fill: 'forwards'})
   if(count === 0){
     count = array.length;
   }
@@ -29,12 +28,28 @@ function prevSlide(){
 
 function nextSlide(){
   header.style.display = 'none';
-  imageSlider.animate([{opacity: '.3'},{opacity: '1'}],
-                     {duration: 800, fill: 'forwards'})
-  if(count === array.length -1){
+  imageSlider.animate([{opacity: '.5'},{opacity: '1'}], {duration: 800, fill: 'forwards'})
+  if(count === array.length - 1){
     count =-1;
   }
   
   count++;
   imageSlider.style.backgroundImage = `url(${array[count]})`
 }
+
+document.addEventListener('keydown', function (event) {
+  let active = document.activeElement;
+  
+  if (event.keyCode === 9) {
+    event.preventDefault();
+    if (left === active) {
+      right.focus();
+    } 
+      
+    if (right === active) {
+      left.focus();
+    } else {
+      right.focus();
+    }
+  }
+});

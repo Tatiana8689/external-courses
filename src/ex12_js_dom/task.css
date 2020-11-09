@@ -59,3 +59,7 @@
     opacity: 0.6;
     cursor: pointer;
 }
+
+.btn-left:focus, .btn-right:focus {
+    opacity: 0.6;
+}
