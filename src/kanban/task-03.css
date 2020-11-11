@@ -31,7 +31,7 @@ a {
 .menu-left {
     display: flex;
     align-items: center;
-    margin-left: 14px; 
+    margin-left: 14px;
 }
 
 .image-logo {
@@ -59,10 +59,16 @@ a {
 }
 
 .profile {
+    position: relative;
     display: flex;
     align-items: center;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 10px;
 }
-  
+
 .new-list-btn {
     display: flex;
     align-items: center;
@@ -76,6 +82,7 @@ a {
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
+    background: #FFFFFF;
     color: #000000;
     border-radius: 5px;
     cursor: pointer;
@@ -84,20 +91,50 @@ a {
 .describe-btn {
     padding-right: 10px;
 }
-  
+
 .user-icon {
     background: #FFFFFF;
     border-radius: 50%;
+    width: 40px;
+    height: 40px;
 }
 
-.profile-menu {
-    -webkit-appearance: none;
-    background: url("image/arrow-down.svg") no-repeat 50% 50%;
+.shevron-icon {
     width: 24px;
     height: 24px;
-    border: none;
     background-color: transparent;
-    outline: none;
+}
+
+.list {
+    position: absolute;
+    right: 0;
+    top: 55px;
+    width: 130px;
+    list-style: none;
+    background-color: #FFFFFF;
+    text-align: left;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.list .item {
+    padding: 10px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.list .item:hover {
+    background-color: #0067A3;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+
+}
+
+.open .shevron-icon {
+    transform: scale(1, -1);
 }
 
 .board-footer {
@@ -115,7 +152,7 @@ a {
     justify-content: space-between;
     padding: 0 24px;
 }
-  
+
 .footer-left .task-counter {
     margin-left: 43px;
 }
