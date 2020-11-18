@@ -32,51 +32,54 @@
     <main class="tasks-board">
         <section class="block backlog">
             <div class="list-header">
-                <span class="list-name">Backlog</span>
-                <span class="dot">...</span>
+                <div class="list-name">Backlog</div>
+                <button class="dot">•••</button>
             </div>
-            <ul id="backlog-tasks" class="task-list">
-            </ul>
+            </div>
+            <ul id="backlog-tasks" class="task-list"></ul>
             <input type="text" value="" class="task-input">
-            <button type="button" id="backlog-add" class="add">+ Add card<button>
+            <button type="button" id="backlog-add" class="add">+ Add card</button>
         </section>
         <section class="block ready">
             <div class="list-header">
-                <span class="list-name">Ready</span>
-                <span class="dot">...</span>
+                <div class="list-name">Ready</div>
+                <button class="dot">•••</button>
             </div>
-            <ul id="ready-tasks" class="task-list">
-            </ul>
+            <ul id="ready-tasks" class="task-list"></ul>
             <button id="ready-select" class="select">
                 <div id="ready-shevron" class="select-shevron">
                     <img class="shevron-icon" src="image/arrow-down — black.svg" alt="arrow">
                 </div>
             </button>
-            <button type="button" id="ready-add" class="add">+ Add card<button>
+            <button type="button" id="ready-add" class="add">+ Add card</button>
         </section>
         <section class="block in-progress">
             <div class="list-header">
-                <span class="list-name">In Progress</span>
-                <span class="dot">...</span>
+                <div class="list-name">In Progress</div>
+                <button class="dot">•••</button>
+            </div>
             </div>
             <ul id="inProgress-tasks" class="task-list"></ul>
             <button id="inProgress-select" class="select">
                 <div id="inProgress-shevron" class="select-shevron">
                     <img class="shevron-icon" src="image/arrow-down — black.svg" alt="arrow">
                 </div>
-                <button type="button" id="inProgress-add" class="add">+ Add card<button>
+            </button>
+            <button type="button" id="inProgress-add" class="add">+ Add card</button>
         </section>
         <section class="block finished">
             <div class="list-header">
-                <span class="list-name">Finished</span>
-                <span class="dot">...</span>
+                <div class="list-name">Finished</div>
+                <button class="dot">•••</button>
+            </div>
             </div>
             <ul id="finished-tasks" class="task-list"></ul>
             <button id="finished-select" class="select">
                 <div id="finished-shevron" class="select-shevron">
                     <img class="shevron-icon" src="image/arrow-down — black.svg" alt="arrow">
                 </div>
-                <button type="button" id="finished-add" class="add">+ Add card<button>
+            </button>
+            <button type="button" id="finished-add" class="add">+ Add card</button>
         </section>
     </main>
     <footer class="board-footer">
@@ -90,6 +93,7 @@
     </footer>
     <script src="task-03.js"></script>
     <script src="task-03-1.js"></script>
+    <script src="mock.js"></script>
 </body>
 
 </html>

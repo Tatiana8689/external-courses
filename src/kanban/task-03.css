@@ -31,7 +31,22 @@ button {
 
 .task-list {
     list-style: none;
+    padding-right: 12px;
     overflow-Y: auto;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ffffff;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 12px;
+    border-radius: 5px;
+    background-color: #CBCBCB;
 }
 
 .board-header {
@@ -146,8 +161,7 @@ button {
     font-size: 15px;
 }
 
-.list .item:hover,
-.select-list .item:hover {
+.list .item:hover, .select-list .item:hover {
     background-color: #0067A3;
     border-radius: 5px;
     color: #ffffff;
@@ -166,17 +180,14 @@ button {
     background: #EBECF0;
     border-radius: 10px;
     padding: 12px;
+    padding-right: 0;
 }
 
 .list-header {
     display: flex;
     justify-content: space-between;
     color: #000000;
-}
-
-.dot {
-    font-weight: bold;
-    font-size: 25px;
+    padding-right: 12px;
 }
 
 .block .task-list li {
@@ -187,9 +198,10 @@ button {
 }
 
 .task-input, .select {
+    width: calc(100% - 12px);
     outline: none;
     border: none;
-    margin: 12px 0;
+    margin-bottom: 12px;
     padding: 6px 8px;
     height: 35px;
     border-radius: 5px;
@@ -225,22 +237,8 @@ button {
     display: block;
 }
 
-::-webkit-scrollbar-button {
-    background-image: url('');
-    background-repeat: no-repeat;
-    width: 0;
-    height: 0;
-}
-
-::-webkit-scrollbar-tack {
-    width: 12px;
-    height: 80%;
-    background-color: #ffffff;
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-    border-radius: 5px;
+.invisible {
+    display: none;
 }
 
 .add {
