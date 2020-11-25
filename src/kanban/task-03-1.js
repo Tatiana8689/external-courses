@@ -1,4 +1,4 @@
-const items = JSON.parse(localStorage.getItem("kanban"));
+const items = JSON.parse(localStorage.getItem("items"));
 let idCount = localStorage.getItem("id-count");
 
 const blocks = {
@@ -39,7 +39,7 @@ const taskInput = document.querySelector('.task-input');
 
 const renderTasks = () => {
     localStorage.setItem("id-count", `${idCount}`);
-    localStorage.setItem("kanban", JSON.stringify(items));
+    localStorage.setItem("items", JSON.stringify(items));
 
     Object.keys(blockItems).forEach(key => {
         blocks[key].innerHTML = '';
@@ -62,7 +62,7 @@ const renderTasks = () => {
         if (blockItems[key].length === 0) {
             buttons[nextKey].setAttribute('disabled', 'disabled');
             buttons[nextKey].style.opacity = '0.5';
-        }else {
+        } else {
             buttons[nextKey].removeAttribute('disabled', 'disabled');
             buttons[nextKey].style.opacity = '1';
         }
@@ -89,6 +89,23 @@ taskBlocksOrder.forEach(key => {
                     renderTasks();
                 }
             });
+
+            taskInput.addEventListener('keydown', function (event) {
+                if (event.keyCode === 13) {
+                    if (taskInput.value === "") {
+                        taskInput.classList.remove('visible');
+                        buttons[key].classList.remove('invisible');
+                    } else {
+                        idCount++
+                        blockItems[key].push({ id: "task" + idCount, name: taskInput.value });
+                        taskInput.value = "";
+                        taskInput.classList.remove('visible');
+                        buttons[key].classList.remove('invisible');
+                        renderTasks();
+                    }
+                }
+            });
+
         });
 
         return;
@@ -97,6 +114,10 @@ taskBlocksOrder.forEach(key => {
     buttons[key].addEventListener('click', () => {
         buttons[key].classList.add('invisible');
         selectButtons[key].classList.add('visible');
+    });
+
+    selectButtons[key].addEventListener('click', () => {
+        shevronButton[key].classList.add('open');
 
         const list = document.createElement('ul');
 
@@ -105,19 +126,6 @@ taskBlocksOrder.forEach(key => {
         const blockOrder = taskBlocksOrder.findIndex(blockKey => key === blockKey);
         const prevBlock = taskBlocksOrder[blockOrder - 1];
 
-        list.addEventListener('click', ({ target }) => {
-            const taskIndex = blockItems[prevBlock].findIndex(({ id }) => {
-                return id === target.id;
-            });
-
-            blockItems[key] = [...blockItems[key], ...blockItems[prevBlock].splice(taskIndex, 1)];
-            list.remove();
-            shevronButton[key].classList.remove('open');
-            selectButtons[key].classList.remove('visible');
-            buttons[key].classList.remove('invisible');
-            renderTasks();
-        });
-
         blockItems[prevBlock].forEach(item => {
             const dropItem = document.createElement('li');
 
@@ -125,12 +133,22 @@ taskBlocksOrder.forEach(key => {
             dropItem.innerText = item.name;
             dropItem.classList.add('item');
             list.appendChild(dropItem);
+
+            dropItem.addEventListener('click', () => {
+                const taskIndex = blockItems[prevBlock].findIndex(({ id }) => {
+                    return id === dropItem.id;
+                });
+
+                blockItems[key] = [...blockItems[key], ...blockItems[prevBlock].splice(taskIndex, 1)];
+                shevronButton[key].classList.remove('open');
+                selectButtons[key].classList.remove('visible');
+                buttons[key].classList.remove('invisible');
+                list.remove();
+                renderTasks();
+            });
         });
 
-        shevronButton[key].addEventListener('click', () => {
-            shevronButton[key].classList.add('open');
-            selectButtons[key].appendChild(list);
-        });
+        selectButtons[key].appendChild(list);
     });
 });
 

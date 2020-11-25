@@ -1,3 +1,5 @@
+const TASKS = "items";
+
 const dataMock = [
     {
         title: 'Backlog',
@@ -50,7 +52,7 @@ const dataMock = [
         ],
     },
     {
-        title: 'in progress',
+        title: 'in Progress',
         issues: [
             {
                 id: 'task11',
@@ -77,5 +79,7 @@ const dataMock = [
     },
 ]
 
-localStorage.setItem("kanban", JSON.stringify(dataMock));
-localStorage.setItem('id-count', '14');
+if (!localStorage.getItem(TASKS)) {
+    localStorage.setItem(TASKS, JSON.stringify(dataMock));
+    localStorage.setItem('id-count', '14');
+}
