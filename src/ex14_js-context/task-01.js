@@ -1,4 +1,5 @@
-class Сalculator {
+class Сalculator { 
+  static initialValue = 0; 
 
   static add(a = 0) {
     this.initialValue = this.initialValue + a;
