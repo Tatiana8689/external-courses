@@ -139,7 +139,8 @@ taskBlocksOrder.forEach(key => {
                     return id === dropItem.id;
                 });
 
-                blockItems[key] = [...blockItems[key], ...blockItems[prevBlock].splice(taskIndex, 1)];
+                blockItems[key].push(blockItems[prevBlock][taskIndex]);
+                blockItems[prevBlock].splice(taskIndex, 1)
                 shevronButton[key].classList.remove('open');
                 selectButtons[key].classList.remove('visible');
                 buttons[key].classList.remove('invisible');
