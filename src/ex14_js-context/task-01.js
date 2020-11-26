@@ -40,6 +40,11 @@ class Сalculator {
 
     return this;
   }
+
+  static fetchData(cb = () => {
+    Сalculator.setState(500)}) {
+   setTimeout(cb, 2000);
+  }
 }
 
 module.exports = Сalculator;
