@@ -37,5 +37,9 @@
     "moduleNameMapper": {
       "~utils": "<rootDir>/test-utils.js"
     }
+  },
+  "dependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint-plugin-babel": "^5.3.1"
   }
 }
