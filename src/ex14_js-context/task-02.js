@@ -1,36 +1,36 @@
 function Hangman(value) {
     this.value = value;
 
-    let answerArray = [];
+    this.answerArray = [];
     for (i = 0; i < value.length; i++) {
-        answerArray[i] = "_";
+        this.answerArray[i] = "_";
     }
 
-    let wrongLetterArray = [];
-    let errors = 6;
-    let remainingLetters = value.length;
+    this.wrongLetterArray = [];
+    this.errors = 6;
+    this.remainingLetters = value.length;
 
     this.guess = (letter) => {
-        while (errors > 0) {
+        while (this.errors > 0) {
             if (!value.includes(letter)) {
-                errors--;
-                wrongLetterArray.push(letter);
-                console.log("wrong letter, errors left " + errors + " | " + wrongLetterArray);
+                this.errors--;
+                this.wrongLetterArray.push(letter);
+                console.log("wrong letter, errors left " + this.errors + " | " + this.wrongLetterArray);
 
                 return this;
             }
 
             for (j = 0; j < value.length; j++) {
                 if (letter === value[j]) {
-                    answerArray[j] = letter;
-                    remainingLetters--;
+                    this.answerArray[j] = letter;
+                    this.remainingLetters--;
                 }
             }
-            if (remainingLetters === 0) {
+            if (this.remainingLetters === 0) {
                 console.log(value + " | " + "You won!");
                 return this;
             }
-            console.log(answerArray.join(''));
+            console.log(this.answerArray.join(''));
             return this;
 
         }
@@ -40,25 +40,25 @@ function Hangman(value) {
     }
 
     this.getStatus = () => {
-        console.log(answerArray.join('') + " | " + "errors left " + errors);
+        console.log(this.answerArray.join('') + " | " + "errors left " + this.errors);
 
         return this;
     }
 
     this.getWrongSymbols = () => {
-        console.log(wrongLetterArray);
+        console.log(this.wrongLetterArray);
 
         return this;
     }
 
     this.getErrorsLeft = () => {
-        console.log(errors);
+        console.log(this.errors);
 
         return this;
     }
 
     this.getGuessedString = (x) => {
-        console.log(answerArray.join(''));
+        console.log(this.answerArray.join(''));
 
         return this;
     };

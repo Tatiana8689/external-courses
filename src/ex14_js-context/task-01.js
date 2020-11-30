@@ -1,5 +1,5 @@
-class Сalculator { 
-  static initialValue = 0; 
+class Сalculator {
+  static initialValue = 0;
 
   static add(a = 0) {
     this.initialValue = this.initialValue + a;
@@ -41,9 +41,10 @@ class Сalculator {
     return this;
   }
 
-  static fetchData(cb = () => {
-    Сalculator.setState(500)}) {
-   setTimeout(cb, 2000);
+  static fetchData() {
+    setTimeout(() => {
+      this.initialValue = 500;
+    }, 2000);
   }
 }
 
