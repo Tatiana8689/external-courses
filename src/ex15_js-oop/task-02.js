@@ -26,7 +26,7 @@ class Room {
             }
         });
 
-        const totalPower = powerArr.reduce((sum, item) => sum = sum + item.power, 0); //eslint-disable-line
+        const totalPower = powerArr.reduce((sum, item) => sum + item.power, 0);
 
         console.log("Power inputs = " + totalPower + " W");
     }

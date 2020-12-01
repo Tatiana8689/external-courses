@@ -14,14 +14,12 @@ function Gift(...arg) {
 }
 
 Gift.prototype.totalWeight = function () {
-    giftWeight = this.value.reduce((sum, item) => sum = sum + item.weight, 0); //eslint-disable-line
+    giftWeight = this.value.reduce((sum, item) => sum + item.weight, 0); 
     console.log(giftWeight);
 };
 
 Gift.prototype.sortSweets = function () {
-    sort = this.value.sort(function (a, b) {
-        return a.weight - b.weight;
-    });
+    sort = this.value.sort((a, b) => a.weight - b.weight);
     console.log(sort);
 };
 
