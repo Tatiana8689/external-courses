@@ -41,10 +41,8 @@ class Сalculator {
     return this;
   }
 
-  static fetchData() {
-    setTimeout(() => {
-      this.initialValue = 500;
-    }, 2000);
+  static fetchData(cb) {
+    setTimeout(cb.bind(Сalculator), 2000, 500);
   }
 }
 

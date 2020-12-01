@@ -1,10 +1,8 @@
 function Hangman(value) {
     this.value = value;
 
-    this.answerArray = [];
-    for (i = 0; i < value.length; i++) {
-        this.answerArray[i] = "_";
-    }
+    this.arr = this.value.split('');
+    this.answerArray = this.arr.map(item => "_");
 
     this.wrongLetterArray = [];
     this.errors = 6;
@@ -12,7 +10,7 @@ function Hangman(value) {
 
     this.guess = (letter) => {
         while (this.errors > 0) {
-            if (!value.includes(letter)) {
+            if (!this.value.includes(letter)) {
                 this.errors--;
                 this.wrongLetterArray.push(letter);
                 console.log("wrong letter, errors left " + this.errors + " | " + this.wrongLetterArray);
@@ -20,22 +18,24 @@ function Hangman(value) {
                 return this;
             }
 
-            for (j = 0; j < value.length; j++) {
-                if (letter === value[j]) {
+            for (j = 0; j < this.value.length; j++) {
+                if (letter === this.value[j]) {
                     this.answerArray[j] = letter;
                     this.remainingLetters--;
                 }
             }
             if (this.remainingLetters === 0) {
-                console.log(value + " | " + "You won!");
+                console.log(this.value + " | " + "You won!");
+
                 return this;
             }
             console.log(this.answerArray.join(''));
-            return this;
 
+            return this;
         }
 
         console.log("You lose...");
+
         return this;
     }
 
@@ -52,7 +52,7 @@ function Hangman(value) {
     }
 
     this.getErrorsLeft = () => {
-        console.log(this.errors);
+        console.log("errors left " + this.errors);
 
         return this;
     }
@@ -64,7 +64,12 @@ function Hangman(value) {
     };
 
     this.startAgain = (value) => {
-        return new Hangman(value)
+        this.value = value;
+        this.arr = this.value.split('');
+        this.answerArray = this.arr.map(item => "_");
+        this.remainingLetters = this.value.length;
+
+        return this
     }
 }
 
