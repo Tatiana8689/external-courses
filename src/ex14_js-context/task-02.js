@@ -5,14 +5,19 @@ function Hangman(value) {
     this.answerArray = this.arr.map(item => "_");
 
     this.wrongLetterArray = [];
+    this.wrongSimbolArray = [];
     this.errors = 6;
     this.remainingLetters = value.length;
 
     this.guess = (letter) => {
         while (this.errors > 0) {
             if (!this.value.includes(letter)) {
+                if (!this.wrongSimbolArray.includes(letter)) {
+                    this.wrongSimbolArray.push(letter);
+                }
                 this.errors--;
                 this.wrongLetterArray.push(letter);
+
                 console.log("wrong letter, errors left " + this.errors + " | " + this.wrongLetterArray);
 
                 return this;
@@ -40,27 +45,19 @@ function Hangman(value) {
     }
 
     this.getStatus = () => {
-        console.log(this.answerArray.join('') + " | " + "errors left " + this.errors);
-
-        return this;
+        return this.answerArray.join('') + " | " + "errors left " + this.errors;
     }
 
     this.getWrongSymbols = () => {
-        console.log(this.wrongLetterArray);
-
-        return this;
+        return this.wrongSimbolArray;
     }
 
     this.getErrorsLeft = () => {
-        console.log(this.errors);
-
-        return this;
+        return this.errors;
     }
 
     this.getGuessedString = () => {
-        console.log(this.answerArray.join(''));
-
-        return this;
+        return this.answerArray.join('');
     };
 
     this.startAgain = (value) => {
