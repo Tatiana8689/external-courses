@@ -52,12 +52,12 @@ function Hangman(value) {
     }
 
     this.getErrorsLeft = () => {
-        console.log("errors left " + this.errors);
+        console.log(this.errors);
 
         return this;
     }
 
-    this.getGuessedString = (x) => {
+    this.getGuessedString = () => {
         console.log(this.answerArray.join(''));
 
         return this;
@@ -75,4 +75,4 @@ function Hangman(value) {
 
 let hangman = new Hangman('webpurple');
 
-module.exports = new Hangman;
+module.exports = hangman;
