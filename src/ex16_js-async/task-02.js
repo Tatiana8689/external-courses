@@ -1,6 +1,4 @@
 const input = document.getElementById('search');
-const form = document.getElementById('form')
-const result = document.getElementById('result')
 
 const debounce = (fn, ms) => {
   let timeout;
