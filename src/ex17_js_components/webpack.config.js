@@ -8,7 +8,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "main_bundle.js",
-    publicPath: './dist',
+    publicPath: "",
   },
   devServer: {
     contentBase: path.join(__dirname, "dist"),
@@ -51,7 +51,7 @@ module.exports = {
           {
             loader: "file-loader",
             options: {
-              outputPath: 'image',
+              outputPath: './image',
               name: "[name].[ext]",
             },
           },
