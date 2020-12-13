@@ -1,16 +1,23 @@
-# Практическая работа 17 - Компонентный подход
+# Webpack main configuration
 
-## Задание 1
+Features
 
-На протяжении нескольких занятий вы работали над проектом Kanban. Необходимо переписать его, следуя правилам компонентного подхода. 
-В папке этого задания должен быть файл index.html, собирающий проект, и папка src с исходниками.<br>
-А так же обязательное требование - написать очень подробный файл README.md и положить его в корень проекта. Должно быть описано, как открыть ваш проект.
+- .js files process by babel - JavaScript compiler
+- configured webpack-dev-server
+- .svg, .png, .jpg files processed by file-loader
+- .css files processed by MiniCssExtractPlugin and css-loader, has css modules support
+- HtmlWebpackPlugin simplifies creation of HTML files to serve your webpack bundles
 
-### Требования
+## Installation
 
-- Файловая структура (см. описание выше)
-- Использование компонентов (модулей)
-- Использование синтаксиса import/export
-- Не использовать устаревшие операторы (var, и тд)
+Clone project to your folder and then install dependencies:
 
-PS. в index.html может лежать весь html, но так же можно разбить его на модули и вставлять в DOM через специальные методы. Инициатива при выборе дополнительных инструментов привествуется
+    npm install
+
+How to run WebPack dev server:
+
+    npm start
+
+How to build project:
+
+    npm run build

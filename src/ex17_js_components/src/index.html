@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Kanban</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="board-header">
+        <div class="menu-left">
+            <button class="image-logo" type="button">
+                <img src="image/logo.svg" alt="logo">
+            </button>
+            <a href="#">
+                <h1 class="logo">Awesome Kanban Board</h1>
+            </a>
+        </div>
+        <div class="menu-right">
+            <button class="new-list-btn" type="button">
+                <img src="image/add-list.svg" alt="add list">
+                <span class="describe-btn">Create new list</span>
+            </button>
+            <button class="profile">
+                <img class="user-icon" src="image/user-icon.svg" alt="avatar">
+                <img class="shevron-icon" src="image/arrow-down.svg" alt="arrow">
+            </button>
+        </div>
+    </header>
+    <main class="tasks-board">
+        <section class="block backlog">
+            <div class="list-header">
+                <div class="list-name">Backlog</div>
+                <button class="dot">•••</button>
+            </div>
+            </div>
+            <ul id="backlog-tasks" class="task-list"></ul>
+            <input type="text" value="" class="task-input">
+            <button type="button" id="backlog-add" class="add">+ Add card</button>
+        </section>
+        <section class="block ready">
+            <div class="list-header">
+                <div class="list-name">Ready</div>
+                <button class="dot">•••</button>
+            </div>
+            <ul id="ready-tasks" class="task-list"></ul>
+            <button id="ready-select" class="select">
+                <div id="ready-shevron" class="select-shevron">
+                    <img class="shevron-icon" src="image/arrow-down — black.svg" alt="arrow">
+                </div>
+            </button>
+            <button type="button" id="ready-add" class="add">+ Add card</button>
+        </section>
+        <section class="block in-progress">
+            <div class="list-header">
+                <div class="list-name">In Progress</div>
+                <button class="dot">•••</button>
+            </div>
+            </div>
+            <ul id="inProgress-tasks" class="task-list"></ul>
+            <button id="inProgress-select" class="select">
+                <div id="inProgress-shevron" class="select-shevron">
+                    <img class="shevron-icon" src="image/arrow-down — black.svg" alt="arrow">
+                </div>
+            </button>
+            <button type="button" id="inProgress-add" class="add">+ Add card</button>
+        </section>
+        <section class="block finished">
+            <div class="list-header">
+                <div class="list-name">Finished</div>
+                <button class="dot">•••</button>
+            </div>
+            </div>
+            <ul id="finished-tasks" class="task-list"></ul>
+            <button id="finished-select" class="select">
+                <div id="finished-shevron" class="select-shevron">
+                    <img class="shevron-icon" src="image/arrow-down — black.svg" alt="arrow">
+                </div>
+            </button>
+            <button type="button" id="finished-add" class="add">+ Add card</button>
+        </section>
+    </main>
+    <footer class="board-footer">
+        <div class="footer-left">
+            <span class="task-counter">Active tasks: &lt;N&gt;</span>
+            <span class="task-counter">Finished tasks: &lt;M&gt;</span>
+        </div>
+        <div class="footer-right">
+            <span class="creater">Kanban board by &lt;NAME&gt;, &lt;YEAR&gt;</span>
+        </div>
+    </footer>
+</body>
+
+</html>
