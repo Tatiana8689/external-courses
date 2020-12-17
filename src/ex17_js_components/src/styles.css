@@ -61,7 +61,6 @@ button {
     background-color: #E5E5E5;
     height: calc(100% - 110px);
     background-color: #0079BF;
-
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
@@ -159,12 +158,10 @@ button {
 
 .list .item {
     padding: 10px;
-
     font-size: 15px;
 }
 
 .list .item:hover, .select-list .item:hover {
-
     background-color: #0067A3;
     border-radius: 5px;
     color: #ffffff;

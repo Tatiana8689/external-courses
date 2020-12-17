@@ -2,15 +2,15 @@ import "./styles.css"
 import "./components/Tasks/mock.js";
 import { renderTasks } from "./components/Tasks/render_tasks.js";
 import { blockItems, buttons, selectButtons, shevronButton, taskBlocksOrder, taskInput, idCount } from "./components/Tasks/constants-task.js";
-import { userProfile, btn, list } from "./components/Header/header-profile.js";
+import { userProfile, profileButton, menuList } from "./components/Header/header-profile.js";
 
-btn.addEventListener('click', function () {
+profileButton.addEventListener('click', function () {
     userProfile.classList.toggle('open');
 
     if (userProfile.classList.contains('open')) {
-        userProfile.appendChild(list);
+        userProfile.appendChild(menuList);
     } else {
-        list.remove();
+        menuList.remove();
     }
 });
 
