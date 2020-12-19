@@ -61,11 +61,16 @@ button {
     background-color: #E5E5E5;
     height: calc(100% - 110px);
     background-color: #0079BF;
-
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
     padding: 20px;
+    overflow-x: auto;
+}
+
+.wrapper {
+    width: 300%;
+    height: 100%;
 }
 
 .menu-left {
@@ -164,7 +169,6 @@ button {
 }
 
 .list .item:hover, .select-list .item:hover {
-
     background-color: #0067A3;
     border-radius: 5px;
     color: #ffffff;
@@ -192,11 +196,12 @@ button {
     display: flex;
     flex-direction: column;
     max-height: 100%;
-    width: 282px;
+    min-width: 282px;
     background: #EBECF0;
     border-radius: 10px;
     padding: 12px;
     padding-right: 0;
+    margin: 0 30px;
 }
 
 .list-header {

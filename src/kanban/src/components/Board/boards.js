@@ -1,5 +1,4 @@
 import { main } from "../Constants/constants.js";
-import { items, setStorage } from "../../Model/model.js";
 
 export const board = (key) => {
   const section = document.createElement('section');
@@ -52,7 +51,7 @@ export const board = (key) => {
   const img = document.createElement('img');
 
   img.className = "shevron-icon";
-  img.src = "image/arrow-down — black.svg";
+  img.src = "image/arrow-down-black.svg";
   img.alt = "arrow"
 
   shevron.appendChild(img);

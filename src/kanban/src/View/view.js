@@ -28,14 +28,12 @@ let blockItems = {}
 items.forEach(key => {
   blockItems[key.title] = key.issues;
 });
-console.log(blockItems)
 
 const taskBlocksOrder = []
 
 items.forEach(key => {
   taskBlocksOrder.push(key.title)
 });
-console.log(taskBlocksOrder)
 
 const blocks = {}
 
