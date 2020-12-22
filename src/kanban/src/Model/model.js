@@ -87,7 +87,7 @@ if (!localStorage.getItem(TASKS)) {
 const items = JSON.parse(localStorage.getItem("items"));
 let idCount = +localStorage.getItem("id-count");
 
-const setStorage = () => {
+let setStorage = () => {
     localStorage.setItem("id-count", `${idCount}`);
     localStorage.setItem("items", JSON.stringify(items));
 }
