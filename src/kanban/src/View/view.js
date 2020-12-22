@@ -204,7 +204,7 @@ taskBlocksOrder.forEach(key => {
           taskInput[key].classList.remove('visible');
           buttons[key].classList.remove('invisible');
         } else {
-          idCount = idCount + 1;
+          idCount + 1; //eslint-disable-line
           blockItems[key].push({ id: "task" + idCount, name: taskInput[key].value });
           taskInput[key].value = "";
           taskInput[key].classList.remove('visible');
@@ -219,7 +219,7 @@ taskBlocksOrder.forEach(key => {
             taskInput[key].classList.remove('visible');
             buttons[key].classList.remove('invisible');
           } else {
-            idCount = idCount + 1;
+            idCount + 1; //eslint-disable-line
             blockItems[key].push({ id: "task" + idCount, name: taskInput[key].value });
             taskInput[key].value = "";
             taskInput[key].classList.remove('visible');
