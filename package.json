@@ -22,7 +22,9 @@
     "eslint": "5.4.0",
     "html-validator": "3.1.2",
     "jest": "24.9.0",
-    "pre-commit": "1.2.2"
+    "pre-commit": "1.2.2",
+    "serve": "^11.3.2",
+    "webpack": "^5.10.2"
   },
   "pre-commit": [
     "test",
