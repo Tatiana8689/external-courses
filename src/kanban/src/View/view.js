@@ -84,7 +84,7 @@ const renderBoard = () => {
     sectionBlocks[key].appendChild(input);
     sectionBlocks[key].appendChild(selectButton);
     sectionBlocks[key].appendChild(addTaskButton);
-  })
+  });
 }
 
 renderBoard();
@@ -98,7 +98,7 @@ const deliteButtons = {};
 const taskInput = {};
 const taskBlocksOrder = [];
 
-const update = () => {
+const updateConst = () => {
   items.forEach(key => {
     blockItems[key.title] = key.issues;
   });
@@ -131,10 +131,9 @@ const update = () => {
   items.forEach(key => {
     taskBlocksOrder.push(key.title);
   });
-
 }
 
-update();
+updateConst()
 
 const renderTasks = () => {
   setStorage();
@@ -171,12 +170,13 @@ const renderTasks = () => {
   const length = items.length - 1;
 
   for (let i = 1; i < length; i++) {
-    arr.push(items[i].issues.length)
+    arr.push(items[i].issues.length);
   }
+
   if (arr.length) {
     const activeTaskCount = arr.reduce((sum, el) => sum + el);
 
-    activeCount.innerHTML = `Active tasks: ${activeTaskCount}`
+    activeCount.innerHTML = `Active tasks: ${activeTaskCount}`;
   } else {
     activeCount.innerHTML = `Active tasks: 0`
   }
@@ -186,35 +186,33 @@ const renderTasks = () => {
   if (items.length && items.length !== 1) {
     const finishedTaskCounter = items[lengthEndBoard].issues.length;
 
-    finishedCount.innerHTML = `Finished tasks: ${finishedTaskCounter}`
+    finishedCount.innerHTML = `Finished tasks: ${finishedTaskCounter}`;
   } else {
-    finishedCount.innerHTML = `Finished tasks: 0`
+    finishedCount.innerHTML = `Finished tasks: 0`;
+  }
+
+  //If there are no elements
+
+  if (items.length === 0) {
+    const message = document.createElement("h1");
+    const messageBlock = document.createElement("div");
+
+    messageBlock.className = "message";
+    message.innerHTML = "Create new list";
+    messageBlock.appendChild(message);
+    main.appendChild(messageBlock);
   }
 }
 
-taskBlocksOrder.forEach(key => {
-  if (key === taskBlocksOrder[0]) {
-    buttons[key].addEventListener('click', () => {
-      taskInput[key].classList.add('visible');
-      buttons[key].classList.add('invisible');
-      taskInput[key].focus();
+const listeners = () => {
+  taskBlocksOrder.forEach(key => {
+    if (key === taskBlocksOrder[0]) {
+      buttons[key].addEventListener('click', () => {
+        taskInput[key].classList.add('visible');
+        buttons[key].classList.add('invisible');
+        taskInput[key].focus();
 
-      taskInput[key].addEventListener('blur', () => {
-        if (taskInput[key].value === "") {
-          taskInput[key].classList.remove('visible');
-          buttons[key].classList.remove('invisible');
-        } else {
-          idCount + 1; //eslint-disable-line
-          blockItems[key].push({ id: "task" + idCount, name: taskInput[key].value });
-          taskInput[key].value = "";
-          taskInput[key].classList.remove('visible');
-          buttons[key].classList.remove('invisible');
-          renderTasks();
-        }
-      });
-
-      taskInput[key].addEventListener('keydown', function (event) {
-        if (event.keyCode === 13) {
+        taskInput[key].addEventListener('blur', () => {
           if (taskInput[key].value === "") {
             taskInput[key].classList.remove('visible');
             buttons[key].classList.remove('invisible');
@@ -226,81 +224,98 @@ taskBlocksOrder.forEach(key => {
             buttons[key].classList.remove('invisible');
             renderTasks();
           }
-        }
-      });
-    });
-
-    return;
-  }
-
-  buttons[key].addEventListener('click', () => {
-    buttons[key].classList.add('invisible');
-    selectButtons[key].classList.add('visible');
-  });
-
-  selectButtons[key].addEventListener('click', () => {
-    shevronButton[key].classList.add('open');
-
-    const list = document.createElement('ul');
-
-    list.classList.add('select-list');
-    const blockOrder = taskBlocksOrder.findIndex(blockKey => key === blockKey);
-    const prevBlock = taskBlocksOrder[blockOrder - 1];
-
-    blockItems[prevBlock].forEach(item => {
-      const dropItem = document.createElement('li');
-
-      dropItem.id = item.id;
-      dropItem.innerText = item.name;
-      dropItem.classList.add('item');
-      list.appendChild(dropItem);
-
-      dropItem.addEventListener('click', () => {
-        const taskIndex = blockItems[prevBlock].findIndex(({ id }) => {
-          return id === dropItem.id;
         });
 
-        blockItems[key].push(blockItems[prevBlock][taskIndex]);
-        blockItems[prevBlock].splice(taskIndex, 1);
-        shevronButton[key].classList.remove('open');
-        selectButtons[key].classList.remove('visible');
-        buttons[key].classList.remove('invisible');
-        list.remove();
+        taskInput[key].addEventListener('keydown', function (event) {
+          if (event.keyCode === 13) {
+            if (taskInput[key].value === "") {
+              taskInput[key].classList.remove('visible');
+              buttons[key].classList.remove('invisible');
+            } else {
+              idCount + 1; //eslint-disable-line
+              blockItems[key].push({ id: "task" + idCount, name: taskInput[key].value });
+              taskInput[key].value = "";
+              taskInput[key].classList.remove('visible');
+              buttons[key].classList.remove('invisible');
+              renderTasks();
+            }
+          }
+        });
+      });
+
+      return;
+    }
+
+    buttons[key].addEventListener('click', () => {
+      buttons[key].classList.add('invisible');
+      selectButtons[key].classList.add('visible');
+    });
+
+    selectButtons[key].addEventListener('click', () => {
+      shevronButton[key].classList.add('open');
+
+      const list = document.createElement('ul');
+
+      list.classList.add('select-list');
+      const blockOrder = taskBlocksOrder.findIndex(blockKey => key === blockKey);
+      const prevBlock = taskBlocksOrder[blockOrder - 1];
+
+      blockItems[prevBlock].forEach(item => {
+        const dropItem = document.createElement('li');
+
+        dropItem.id = item.id;
+        dropItem.innerText = item.name;
+        dropItem.classList.add('item');
+        list.appendChild(dropItem);
+
+        dropItem.addEventListener('click', () => {
+          const taskIndex = blockItems[prevBlock].findIndex(({ id }) => {
+            return id === dropItem.id;
+          });
+
+          blockItems[key].push(blockItems[prevBlock][taskIndex]);
+          blockItems[prevBlock].splice(taskIndex, 1);
+          shevronButton[key].classList.remove('open');
+          selectButtons[key].classList.remove('visible');
+          buttons[key].classList.remove('invisible');
+          list.remove();
+          renderTasks();
+        });
+      });
+
+      selectButtons[key].appendChild(list);
+    }); 
+  });
+
+  taskBlocksOrder.forEach(key => {
+    deliteButtons[key].addEventListener("click", () => {
+      const deliteMenu = document.createElement('div');
+
+      deliteMenu.className = "delite-board";
+      deliteMenu.id = `${key}`;
+      deliteMenu.innerHTML = "Удалить";
+      deliteButtons[key].appendChild(deliteMenu);
+
+      deliteMenu.addEventListener("click", () => {
+        const index = items.findIndex(el => {
+          return el.title === key
+        });
+
+        items.splice(index, 1);
+        board();
+        renderBoard();
+        updateConst()
+        listeners()
         renderTasks();
       });
     });
-
-    selectButtons[key].appendChild(list);
   });
-});
+}
 
-
-//Delite Board
-
-taskBlocksOrder.forEach(key => {
-  deliteButtons[key].addEventListener("click", () => {
-    const deliteMenu = document.createElement('div');
-
-    deliteMenu.className = "delite-board";
-    deliteMenu.id = `${key}`;
-    deliteMenu.innerHTML = "Удалить";
-    deliteButtons[key].appendChild(deliteMenu);
-
-    deliteMenu.addEventListener("click", () => {
-      const index = items.findIndex(el => {
-        return el.title === key
-      });
-      items.splice(index, 1);
-      board();
-      renderBoard();
-      update();
-      renderTasks();
-    });
-  });
-});
+listeners()
+renderTasks();
 
 createNewBoard.addEventListener('click', () => {
-
   const section = document.createElement('section');
 
   section.className = 'block';
@@ -313,7 +328,6 @@ createNewBoard.addEventListener('click', () => {
   inputNameBoard.placeholder = "Input board's name";
   inputNameBoard.value = "";
   inputNameBoard.style.display = 'block';
-
   section.appendChild(inputNameBoard);
   inputNameBoard.focus();
 
@@ -329,20 +343,9 @@ createNewBoard.addEventListener('click', () => {
       items.unshift(newItem);
       board();
       renderBoard();
-      update();
+      updateConst()
+      listeners()
       renderTasks();
     }
   });
 });
-
-if (items.length === 0) {
-  const message = document.createElement("h1");
-  const messageBlock = document.createElement("div");
-
-  messageBlock.className = "message";
-  message.innerHTML = "Create new list";
-  messageBlock.appendChild(message);
-  main.appendChild(messageBlock);
-}
-
-renderTasks();
